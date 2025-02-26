@@ -43,7 +43,7 @@ export default function game() {
       sonic.jump();
       scoreMultiplier += 1;
       score += 10 * scoreMultiplier;
-      scoreText.text = `SCORE: ${score}`
+      scoreText.text = `SCORE: ${score}`;
       return;
     }
 
@@ -54,7 +54,7 @@ export default function game() {
     k.play("ring", { volume: 0.5 });
     k.destroy(ring);
     score++;
-    scoreText.text = `SCORE: ${score}`
+    scoreText.text = `SCORE: ${score}`;
   });
 
   let gameSpeed = 300;
@@ -106,6 +106,7 @@ export default function game() {
   ]);
 
   k.onUpdate(() => {
+    if (sonic.isGrounded()) scoreMultiplier = 0;
     if (bgPieces[1].pos.x < 0) {
       bgPieces[0].moveTo(bgPieces[1].pos.x + bgPieceWidth * 2, 0);
       bgPieces.push(bgPieces.shift());
