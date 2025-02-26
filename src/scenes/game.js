@@ -52,6 +52,7 @@ export default function game() {
     }
 
     k.play("hurt", { volume: 0.5 });
+    k.setData("current-store", score)
     k.go("gameover");
   });
   sonic.onCollide("ring", (ring) => {
