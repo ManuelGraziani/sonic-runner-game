@@ -1,1 +1,1 @@
-# runner-game
+# sonic-runner-game
