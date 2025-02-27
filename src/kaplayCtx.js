@@ -14,7 +14,7 @@ const k = kaplay({
     }
   },
   debugKey: "d",
-  debug: true
+  debug: false
 });
 
 export default k
